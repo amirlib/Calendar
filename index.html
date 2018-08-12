@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<meta name="viewport" content="width=device-width"> 
 		<title>Calender</title>
 		<link rel='stylesheet' type='text/css' href='stylesheet-small.css'>
 		<link rel='stylesheet' type='text/css' media='screen and (min-width: 900px)' href='stylesheet-med.css'>
@@ -11,7 +11,7 @@
     </head>
 	<body>
 		<header>
-			<div class='header-cont'> <a href='/'>Calendar</a> </div>
+			<nav> <a href='/'>Calendar</a> </nav>
         </header>
         <main>
             <div class='calendarFrame'>
@@ -25,11 +25,11 @@
                 </div>
                 <div class='daysNamesFrame'>
                     <div class='dayName'> <span id='dayName0'></span></div>
-                    <div class='dayMidName'> <span id='dayName1'></span></div>
-                    <div class='dayMidName'> <span id='dayName2'></span></div>
-                    <div class='dayMidName'> <span id='dayName3'></span></div>
-                    <div class='dayMidName'> <span id='dayName4'></span></div>
-                    <div class='dayMidName'> <span id='dayName5'></span></div>
+                    <div class='dayName'> <span id='dayName1'></span></div>
+                    <div class='dayName'> <span id='dayName2'></span></div>
+                    <div class='dayName'> <span id='dayName3'></span></div>
+                    <div class='dayName'> <span id='dayName4'></span></div>
+                    <div class='dayName'> <span id='dayName5'></span></div>
                     <div class='dayName'> <span id='dayName6'></span></div>
                 </div>
                 <script>
@@ -37,11 +37,7 @@
                     for (let i = 0; i < 6; i++) {
                         document.write("<div class='weekFrame'>");
                         for (let j = 0; j < 7; j++) {
-                            if (j == 0 || j == 6) {
-                                document.write(`<div class='dayCell dayCell${cell}'><span id='cell${cell}'></span></div>`);
-                            } else {
-                                document.write(`<div class='dayMidCell dayCell${cell}'><span id='cell${cell}'></span></div>`);
-                            }
+                            document.write(`<div class='dayCell' id='dayCell${cell}'><span id='cell${cell}'></span></div>`);
                             cell++;
                         }
                         document.write("</div>");

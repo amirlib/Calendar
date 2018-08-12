@@ -168,25 +168,25 @@ var CalendarView = {
             for(let j = 0; j < 7; j++) {
                 if(i == 0 || i == 1) { //2 first lines
                     if(controller.getDayInCalendar(i, j) >= 18 && controller.getDayInCalendar(i, j) <= 31) { //if values belong to current pre-month
-                        $(".dayCell"+cell).removeClass('paintToday').removeClass('paintDayMonth').addClass('paintDayOther');
+                        $("#dayCell"+cell).removeClass('paintToday').removeClass('paintDayMonth').addClass('paintDayOther');
                     } else if(dayMonth == controller.getDayInCalendar(i, j) && dayMonth >= 1 && dayMonth <= 14 && isCurrentDate) { //if day is real-world day
-                        $(".dayCell"+cell).removeClass('paintDayOther').removeClass('paintDayMonth').addClass('paintToday');
+                        $("#dayCell"+cell).removeClass('paintDayOther').removeClass('paintDayMonth').addClass('paintToday');
                     } else { //if values belong to the current month
-                        $(".dayCell"+cell).removeClass('paintDayOther').removeClass('paintToday').addClass('paintDayMonth');
+                        $("#dayCell"+cell).removeClass('paintDayOther').removeClass('paintToday').addClass('paintDayMonth');
                     }
                 } else if (i == 2 || i == 3) { //2 middlle lines
                     if(dayMonth == controller.getDayInCalendar(i, j) && isCurrentDate) { //if day is real-world day
-                        $(".dayCell"+cell).removeClass('paintDayMonth').addClass('paintToday');
+                        $("#dayCell"+cell).removeClass('paintDayMonth').addClass('paintToday');
                     } else { //if values belong to the current month
-                        $(".dayCell"+cell).removeClass('paintToday').addClass('paintDayMonth');
+                        $("#dayCell"+cell).removeClass('paintToday').addClass('paintDayMonth');
                     }
                 } else { //2 last lines
                     if(controller.getDayInCalendar(i, j) >= 1 && controller.getDayInCalendar(i, j) <= 14) { //if values belong to current next month
-                        $(".dayCell"+cell).removeClass('paintToday').removeClass('paintDayMonth').addClass('paintDayOther');
+                        $("#dayCell"+cell).removeClass('paintToday').removeClass('paintDayMonth').addClass('paintDayOther');
                     } else if(dayMonth == controller.getDayInCalendar(i, j) && dayMonth >= 18 && dayMonth <= 31 && isCurrentDate) { //if day is real-world day
-                        $(".dayCell"+cell).removeClass('paintDayOther').removeClass('paintDayMonth').addClass('paintToday');
+                        $("#dayCell"+cell).removeClass('paintDayOther').removeClass('paintDayMonth').addClass('paintToday');
                     } else { //if values belong to the current month
-                        $(".dayCell"+cell).removeClass('paintDayOther').removeClass('paintToday').addClass('paintDayMonth');
+                        $("#dayCell"+cell).removeClass('paintDayOther').removeClass('paintToday').addClass('paintDayMonth');
                     }
                 }
                 cell++;
