@@ -4,4 +4,4 @@ You can check the app in this link: [Calendar](https://babudabu.github.io/Calend
 
 ### Calendar
 
-You can see full month calendar each time, while you can navigate to the next or previous of each month/year.
+You can see full month calendar each time, while you navigate to the next or previous of each month/year.
